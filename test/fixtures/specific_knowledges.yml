@@ -1,0 +1,11 @@
+# Read about fixtures at http://api.rubyonrails.org/classes/ActiveRecord/Fixtures.html
+
+one:
+  doctor_id: 1
+  work_area: MyString
+  description: MyString
+
+two:
+  doctor_id: 1
+  work_area: MyString
+  description: MyString

@@ -1,0 +1,15 @@
+# Read about fixtures at http://api.rubyonrails.org/classes/ActiveRecord/Fixtures.html
+
+one:
+  account_id: 1
+  rut: MyString
+  date_of_birth: 2013-02-01
+  address: MyString
+  gender: MyString
+
+two:
+  account_id: 1
+  rut: MyString
+  date_of_birth: 2013-02-01
+  address: MyString
+  gender: MyString

@@ -1,0 +1,17 @@
+# Read about fixtures at http://api.rubyonrails.org/classes/ActiveRecord/Fixtures.html
+
+one:
+  doctor_id: 1
+  clinic_id: 1
+  day: MyString
+  start_time: 2013-02-01 13:20:10
+  end_time: 2013-02-01 13:20:10
+  type: 
+
+two:
+  doctor_id: 1
+  clinic_id: 1
+  day: MyString
+  start_time: 2013-02-01 13:20:10
+  end_time: 2013-02-01 13:20:10
+  type: 
