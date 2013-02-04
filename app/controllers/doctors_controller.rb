@@ -20,6 +20,7 @@ class DoctorsController < ApplicationController
 
 	def search
 		@doctors = Doctor.search(params[:search])
+		@search_tag = params[:search]
 
 	end
 
