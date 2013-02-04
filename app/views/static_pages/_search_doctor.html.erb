@@ -1,4 +1,6 @@
-<%= form_tag controller: :doctors, action: 'search', method: 'get' do %>
-      <%= text_field_tag :search, params[:search], id: 'search_field' %>
-      <%= submit_tag "Buscar", name: nil %> 
+<%= form_tag({controller: :doctors, action: 'search', method: 'get'}, {class: "navbar-search doctor-search"}) do %>
+	  <div class="input-search">
+	      <%= text_field_tag :search, params[:search], class: 'search-query span3', placeholder: 'buscar especialidad médica, nombre o apellido de doctor' %>
+	      <%= submit_tag "Buscar", name: nil, class: "btn btn-primary btn-large" %> 
+      </div>
   <% end %> 
