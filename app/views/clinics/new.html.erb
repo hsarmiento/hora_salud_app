@@ -1,0 +1,28 @@
+<h2>Crear clinica</h2>
+
+<%= form_for @clinic do |f| %>
+	<%= f.label :name, 'Nombre' %>
+	<%= f.text_field :name %>
+
+	<%= f.label :address, 'Dirección' %>
+	<%= f.text_field :address %>
+
+	<%= f.hidden_field :country, value: 'Chile' %>
+
+	<%= f.label :state, 'Región' %>
+	<%= f.text_field :state %>
+
+	<%= f.label :city, 'Ciudad' %>
+	<%= f.text_field :city %>
+
+	<%= f.label :township, 'Comuna' %>
+	<%= f.text_field :township %>
+
+	<%= f.label :phone, 'Teléfono' %>
+	<%= f.text_field :phone %>
+
+	<%= f.label :email, 'Email' %>
+	<%= f.text_field :email %>
+	<%= f.submit "Guardar" %>
+<% end %>
+

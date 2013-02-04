@@ -1,0 +1,24 @@
+<h1>Ingresar doctor</h1>
+
+<%= form_for @doctor do |f| %>
+	<%= f.label :name, 'Nombre' %>
+	<%= f.text_field :name %>
+
+	<%= f.label :last_name, 'Apellido' %>
+	<%= f.text_field :last_name %>
+
+	<%= f.label :specialty, 'Especialidad médica' %>
+	<%= f.text_field :specialty %>
+
+	<%= f.hidden_field :has_avatar, value: 0 %>
+
+	<%= f.hidden_field :rut, value: 0 %>
+
+	<%= f.hidden_field :account_id, value: 0 %>
+
+	<%= f.fields_for :schedules  do |schedule| %>
+		<%= render 'form_schedule', f: schedule, clinic: @clinic %>
+	<% end %>
+
+	<%= f.submit "Guardar" %>
+<% end %>

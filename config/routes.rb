@@ -1,4 +1,16 @@
 HoraSaludApp::Application.routes.draw do
+
+  resources :clinics do
+    resources :doctors
+  end
+  resources :doctors
+  resources :specific_knowledges
+
+  root to: 'static_pages#home'
+  match '/', to: 'static_pages#home'
+
+  match '/search', to: 'doctors#search'
+  #get 'search' => 'doctors#search', as: "search"
   # The priority is based upon order of creation:
   # first created -> highest priority.
 
