@@ -8,7 +8,7 @@ gem 'rails', '3.2.9'
 gem 'pg'
 gem 'annotate', '2.5.0'
 gem 'bootstrap-sass', '~> 2.2.2.0'
-gem 'will_paginate', '~> 3.0.0'
+gem 'will_paginate', '3.0.3'
 gem 'bootstrap-will_paginate'
 gem 'bcrypt-ruby', '3.0.1'
 gem "jquery-rails"

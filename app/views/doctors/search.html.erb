@@ -1,5 +1,36 @@
-<h3>Resultados para <%= @search_tag %></h3>
+<div class="body-home">
+	<div class="container">
+		<div class="hero-unit effect-opacity">
+			<h2>Resultados para <strong>"<%= @search_tag %>"</strong></h2>
+			<% if @doctors.any? %>
+			<ul>
+				<% @doctors.each do |doctor| %>
+					<% if doctor.clinics.any? %>
+						<% doctor.clinics.each do |clinic| %>
+							<li><strong><%= clinic.name%></strong>
+								<dl class="dl-horizontal">
+									<dt>Profesionales</dt>
+									<dd>Dr. <%= doctor.name.camelize %><%= ' '+doctor.last_name.camelize%> - <%= doctor.specialty.camelize %>
+									</dd>
+									<dt>Dirección</dt>
+									<dd><%= clinic.address %> - <%= clinic.township%>, <%= clinic.city%></dd>
+									<dt>Teléfono</dt>
+									<dd><%= clinic.phone %></dd>
+								</dl>
+							</li>
+							<hr>							
+						<% end %>
+					<% end %>
+					<br/>
+				<% end %>
+			</ul>
+			<%= will_paginate @doctors, params: {search: @search_tag} %>
+			<% else %>
+				<strong>No se encontraron resultados de su búsqueda </strong>
+			<% end %>
+		</div>
+	</div>
+</div>
 
-<% @doctors.each do |doctor| %>
-	<%= doctor.name %>
-<% end %>
+
+

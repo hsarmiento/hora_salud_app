@@ -19,8 +19,12 @@ class DoctorsController < ApplicationController
 	end
 
 	def search
-		@doctors = Doctor.search(params[:search])
+		@doctors = Doctor.paginate(:page => params[:page], per_page: 1).search(params[:search])
 		@search_tag = params[:search]
+		respond_to do |format|
+    		format.html { render html: @doctors }
+    	end
+
 
 	end
 
